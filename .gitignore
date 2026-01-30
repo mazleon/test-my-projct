@@ -1,16 +1,15 @@
-__pycache__
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
 
 # Environment variables
 .env
 
 # Virtual environment
-.venv
-
-# Python cache
-*.pyc
-
-# Byte-compiled / optimized / DLL files
-*.py[cod]
+.venv/
+env/
+venv/
 
 # Distribution / packaging
 *.egg-info/
@@ -21,6 +20,8 @@ build/
 .pytest_cache/
 .coverage
 htmlcov/
+.mypy_cache/
+.tox/
 
 # IDEs
 .idea/
@@ -44,15 +45,10 @@ Thumbs.db
 # Database files
 *.db
 *.sqlite
+*.sqlite3
 
 # Cache files
 *.cache
 
 # Python version
 .python-version
-
-# Python lock file
-uv.lock
-
-# Python pyproject file
-pyproject.toml
