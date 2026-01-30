@@ -8,8 +8,31 @@ dependencies = [
     "fastapi>=0.128.0",
     "httpx>=0.28.1",
     "pytest>=9.0.2",
+    "ruff>=0.14.14",
     "uvicorn>=0.40.0",
 ]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
+
+[tool.ruff]
+# Target version for the project
+target-version = "py313"
+
+# List of rule codes to enable
+# E: pycodestyle errors
+# F: Pyflakes
+# I: isort (import sorting)
+# B: flake8-bugbear (common bugs)
+# UP: pyupgrade (modernize code)
+lint.select = ["E", "F", "I", "B", "UP"]
+
+# Ignore certain rules if needed
+lint.ignore = []
+
+[tool.ruff.format]
+# Enable auto-formatting
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
